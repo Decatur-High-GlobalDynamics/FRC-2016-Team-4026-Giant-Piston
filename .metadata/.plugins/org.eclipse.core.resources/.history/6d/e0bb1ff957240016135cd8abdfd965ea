@@ -1,0 +1,361 @@
+#include "WPILib.h"
+#define INTAKE_WHEEL_SPEED 1.0
+#define USE_DRIVE_TIMER 1
+
+/**
+ * This is a demo program showing the use of the RobotDrive class.
+ * The SampleRobot class is the base of a robot application that will automatically call your
+ * Autonomous and OperatorControl methods at the right time as controlled by the switches on
+ * the driver station or the field controls.
+ *
+ * WARNING: While it may look like a good choice to use for your code if you're inexperienced,
+ * don't. Unless you know what you are doing, complex code will be much more difficult under
+ * this system. Use IterativeRobot or Command-Based instead if you're new.
+ */
+class Robot: public SampleRobot
+{
+//	RobotDrive myRobot; // robot drive system
+	SendableChooser *chooser;
+
+	Talon rightDriveMotor;
+	Talon leftDriveMotor;
+	Talon intakeWheel;
+	Spark intakeTilt;
+	Spark winchTal;
+	Joystick driveGamepad;
+	Joystick guestStick;
+	Timer toggleButtonTimer;
+	Timer autoDriveTimer;
+	Timer winchTimer;
+	Timer shootTimer;
+	//AnalogInput crateDistanceSensor;
+	AnalogGyro driveGyro;
+	DigitalInput shootLimitSwitch;
+	AnalogInput wallDistanceSensor;
+	DoubleSolenoid *hanger;
+	Compressor *compressorPointer;
+	int autoState;
+	bool winchRetracted;
+	bool shootTimerStarted;
+	bool driveReverse;
+	bool isGyroResetTelop;
+	int turningButtonState;
+	int turningButtonAngle;
+	int currentTurningButton;
+	float rightPower=0;
+	float leftPower=0;
+	double maxSpeedChange=0.2;
+	double defualtThrottle=0.5;
+	double guestThrottle=0.5;
+
+	Preferences *prefs;
+
+
+	const std::string autoNameDefault = "Default";
+	const std::string autoNameLowBar= "Low Bar";
+	const std::string autoNameMoatRampart = "Moat or Rampart";
+	const std::string autoNameScore = "Low Bar Score (non functional)";
+
+public:
+	Robot() :
+//			myRobot(0, 1),	// these must be initialized in the same order
+			chooser(),
+			rightDriveMotor(0),
+			leftDriveMotor(1),
+			intakeWheel(2),
+			intakeTilt(3),
+			winchTal(4),
+			driveGamepad(0),
+			guestStick(1),
+			toggleButtonTimer(),
+			autoDriveTimer(),
+			winchTimer(),
+			shootTimer(),
+			driveGyro(0),
+			shootLimitSwitch(0),
+			wallDistanceSensor(1)
+	{
+		autoState = 0;
+		winchRetracted = false;
+		isGyroResetTelop = false;
+		hanger= new DoubleSolenoid(0, 3);
+		driveReverse = false;
+		toggleButtonTimer.Reset();
+		toggleButtonTimer.Start();
+		compressorPointer = new Compressor();
+		compressorPointer->SetClosedLoopControl(true);
+
+		shootTimerStarted = false;
+		shootTimer.Reset();
+		turningButtonState=0;
+		turningButtonAngle=0;
+		currentTurningButton=0;
+		hanger->Set(DoubleSolenoid::kReverse);
+
+		//Note SmartDashboard is not initialized here, wait until RobotInit to make SmartDashboard calls
+	}
+
+	void RobotInit()
+	{
+
+		chooser = new SendableChooser();
+		chooser->AddDefault(autoNameDefault, (void*)&autoNameDefault);
+		chooser->AddObject(autoNameLowBar, (void*)&autoNameLowBar);
+		chooser->AddObject(autoNameMoatRampart, (void*)&autoNameMoatRampart);
+		chooser->AddObject(autoNameScore, (void*)&autoNameScore);
+		SmartDashboard::PutData("Auto Modes", chooser);
+		//prefs = Preferences::GetInstance();
+		//maxSpeedChange = prefs->GetDouble("MaxSpeedChange", 0.2);
+		//defualtThrottle = prefs->GetDouble("defualtThrottle", 0.5);
+		//guestThrottle = prefs->GetDouble("guestThrottle", defualtThrottle);
+		SmartDashboard::PutNumber("Driver Throttle", defualtThrottle);
+		SmartDashboard::PutNumber("Guest Throttle", guestThrottle);
+
+		driveGyro.Reset();
+		hanger->Set(DoubleSolenoid::kReverse);
+
+	}
+
+	float smoothJoyStick(float joyInput)
+	{
+		return powf(joyInput,3);
+	}
+
+	//-1 is reverse and 1 is norm
+	void tankDrive(float throttle)
+	{
+		float right = driveGamepad.GetRawAxis(1);
+		float left = driveGamepad.GetRawAxis(3);
+		if(!driveGamepad.GetRawButton(6))
+		{
+			setDriveMotors(right, left, driveGamepad.GetRawButton(8), throttle);
+		}
+		else
+		{
+			if(isGyroResetTelop == false)
+			{
+				driveGyro.Reset();
+				isGyroResetTelop = true;
+			}
+			if (driveReverse)
+			{
+				keepDriveStraight(right, right, 0, throttle);
+			}
+			else
+			{
+				keepDriveStraight(-right, -right, 0, throttle);
+			}
+		}
+	}
+	void guestDrive(float throttle)
+	{
+		float x = guestStick.GetX();
+		float y = guestStick.GetY();
+		float right = y-x;
+		float left = y+x;
+		setDrive(right, left, false, throttle);
+	}
+
+	void setDrive(float right, float left, bool reverse, float throttle)
+	{
+		rightPower=rightDriveMotor.Get()/throttle; //will never be outside of -throttle to +throttle
+		leftPower=leftDriveMotor.Get()/throttle;
+		float rightDirection;
+		float leftDirection;
+		if ((right-rightPower)==0)
+		{
+			rightDirection = 0;
+			leftDirection = 0;
+		}
+		else
+		{
+			rightDirection = (right-rightPower)/abs(right-rightPower); // -1 or 1 returened for back/forward
+			leftDirection = (left-leftPower)/abs(left-leftPower);
+		}
+		float rightDifference = fmin(abs(right-rightPower), maxSpeedChange);
+		float leftDifference = fmin(abs(left-leftPower), maxSpeedChange);
+		rightPower+=rightDifference*rightDirection;
+		leftPower+=leftDifference*leftDirection;
+		setDriveMotors(rightPower, leftPower, reverse, throttle);
+	}
+	void setDriveMotors(float right, float left, bool reverse, float throttle)
+	{
+		if (reverse)
+		{
+			leftDriveMotor.Set(-right*throttle);
+			rightDriveMotor.Set(left*throttle);
+		}
+		else
+		{
+			leftDriveMotor.Set(left*throttle);
+			rightDriveMotor.Set(-right*throttle);
+		}
+	}
+	void hangerPiston(int extend, int retract)
+	{
+		if (driveGamepad.GetRawButton(extend))
+		{
+			hanger->Set(DoubleSolenoid::kForward);
+		}
+		else if (driveGamepad.GetRawButton(retract))
+		{
+			hanger->Set(DoubleSolenoid::kReverse);
+		}
+	}
+	void intakeWheelControl(int mIntakeInButton, int mIntakeOutButton)
+	{
+		if (driveGamepad.GetRawButton(mIntakeInButton))
+		{
+			intakeWheel.Set(-INTAKE_WHEEL_SPEED);
+		}
+		else if (driveGamepad.GetRawButton(mIntakeOutButton))
+		{
+			intakeWheel.Set(INTAKE_WHEEL_SPEED);
+		}
+		else
+		{
+			intakeWheel.Set(0);
+		}
+	}
+	void guestIntakeControl(int mIntakeInButton, int mIntakeOutButton)
+	{
+		if (guestStick.GetRawButton(mIntakeInButton))
+		{
+			intakeWheel.Set(-INTAKE_WHEEL_SPEED);
+		}
+		else if (guestStick.GetRawButton(mIntakeOutButton))
+		{
+			intakeWheel.Set(INTAKE_WHEEL_SPEED);
+		}
+		else
+		{
+			intakeWheel.Set(0);
+		}
+	}
+	void cheval(int upButton, int downButton)
+	{
+		//pulls back winc
+		if (driveGamepad.GetRawButton(upButton) && shootLimitSwitch.Get())
+		{
+			winchTal.SetSpeed(0.5);
+		}
+		else if (driveGamepad.GetRawButton(downButton))
+		{
+			winchTal.SetSpeed(-0.5);
+		}
+		else
+		{
+			winchTal.SetSpeed(0.0);
+		}
+	}
+
+	void stopRobotDrive()
+	{
+		leftDriveMotor.Set(0.0);
+		rightDriveMotor.Set(0.0);
+	}
+
+	void keepDriveStraight(float leftDriveVel, float rightDriveVel, float targetAngle, float throttle)
+	{
+		float error = 0, correctionFactor;
+		error = targetAngle - driveGyro.GetAngle();
+		correctionFactor = (error/75.0);
+		float left;
+		float right;
+
+		if(targetAngle > (driveGyro.GetAngle() - 0.5) || targetAngle < (driveGyro.GetAngle() + 0.5))
+		{
+			left = (-leftDriveVel) + correctionFactor;
+			right = rightDriveVel + correctionFactor;
+		}
+		else
+		{
+			left = -leftDriveVel;
+			right = rightDriveVel;
+		}
+		setDrive(right, left, false, throttle);
+	}
+
+	bool turnGyro(float rAngle)
+	{
+		float error = 0;
+		//Positive gyro angle means turning left
+		if(rAngle < driveGyro.GetAngle())
+		{
+			error = fabs(rAngle) - driveGyro.GetAngle();
+			if(driveGyro.GetAngle() <= fabs(rAngle) && fabs(error) > 2.0)
+			{
+				//turn left
+				leftDriveMotor.Set((error/45) + 0.2); //0.8  div 140
+				rightDriveMotor.Set((error/45) + 0.2); //0.8
+			}
+			else
+			{
+				stopRobotDrive();
+				return true;
+			}
+		}
+		else if(rAngle > driveGyro.GetAngle())
+		{
+			error = -rAngle - driveGyro.GetAngle();
+			if(driveGyro.GetAngle() >= -rAngle && fabs(error) > 2.0)
+			{
+				//turn right
+				leftDriveMotor.Set((error/45) - 0.2); //-0.8
+				rightDriveMotor.Set((error/45) - 0.2); //-0.8
+			}
+			else
+			{
+				stopRobotDrive();
+				return true;
+			}
+		}
+		else
+		{
+			stopRobotDrive();
+			return true;
+		}
+
+		return false;
+	}
+
+	void Autonomous()
+	{
+		std::string autoSelected = *((std::string*)chooser->GetSelected());
+		//std::string autoSelected = SmartDashboard::GetString("Auto Selector", autoNameDefault);
+		std::cout << "Auto selected: " << autoSelected << std::endl;
+
+		//driveGyro.Reset();
+
+		while (IsAutonomous() && IsEnabled())
+		{
+			Wait(0.005);				// wait for a motor update time
+		}
+
+	}
+	void OperatorControl()
+	{
+		while (IsOperatorControl() && IsEnabled())
+		{
+			defualtThrottle = SmartDashboard::GetNumber("Driver Throttle", defualtThrottle);
+			guestThrottle = SmartDashboard::GetNumber("Guest Throttle", guestThrottle);
+			if (driveGamepad.GetRawButton(10))
+			{
+				guestDrive(guestThrottle);
+				guestIntakeControl(1,2);
+			}
+			else
+			{
+				tankDrive(defualtThrottle);
+				//tankDrive(0.5);
+				intakeWheelControl(5,7);
+				cheval(2,4);
+				hangerPiston(1,3);
+			}
+			Wait(0.005);				// wait for a motor update time
+		}
+	}
+
+};
+
+START_ROBOT_CLASS(Robot)

@@ -1,0 +1,388 @@
+19:54:59 **** Rebuild of configuration Debug for project CompetitionControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/CompetitionControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+19:55:49 **** Rebuild of configuration Debug for project DemoControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/DemoControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+20:02:13 **** Rebuild of configuration Debug for project CompetitionControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/CompetitionControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+20:02:16 **** Rebuild of configuration Debug for project DemoControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/DemoControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+20:16:52 **** Incremental Build of configuration Debug for project CompetitionControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/CompetitionControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'void Robot::lowBarScoreAutonomous()':
+../src/Robot.cpp:602:32: warning: 'wallTurnDistance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if (calculateWallDistance()>wallTurnDistance){}
+                                ^
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+20:16:55 **** Incremental Build of configuration Debug for project DemoControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/DemoControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'void Robot::lowBarScoreAutonomous()':
+../src/Robot.cpp:597:32: warning: 'wallTurnDistance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if (calculateWallDistance()>wallTurnDistance){}
+                                ^
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+20:16:59 **** Rebuild of configuration Debug for project GuestDemoControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestDemoControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'void Robot::lowBarScoreAutonomous()':
+../src/Robot.cpp:597:32: warning: 'wallTurnDistance' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     if (calculateWallDistance()>wallTurnDistance){}
+                                ^
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestDemoControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestDemoControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestDemoControl
+21:09:33 **** Rebuild of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+14:15:19 **** Rebuild of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In constructor 'Robot::Robot()':
+../src/Robot.cpp:67:24: error: no matching function for call to 'Joystick::Joystick()'
+    wallDistanceSensor(1)
+                        ^
+../src/Robot.cpp:67:24: note: candidates are:
+In file included from /Users/darien/wpilib/cpp/current/include/WPILib.h:64:0,
+                 from ../src/Robot.cpp:1:
+/Users/darien/wpilib/cpp/current/include/Joystick.h:66:3: note: Joystick::Joystick(uint32_t, uint32_t, uint32_t)
+   Joystick(uint32_t port, uint32_t numAxisTypes, uint32_t numButtonTypes);
+   ^
+/Users/darien/wpilib/cpp/current/include/Joystick.h:66:3: note:   candidate expects 3 arguments, 0 provided
+/Users/darien/wpilib/cpp/current/include/Joystick.h:65:12: note: Joystick::Joystick(uint32_t)
+   explicit Joystick(uint32_t port);
+            ^
+/Users/darien/wpilib/cpp/current/include/Joystick.h:65:12: note:   candidate expects 1 argument, 0 provided
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+14:16:14 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:25:44 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+20:02:55 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+20:04:51 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+15:07:09 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:32:25 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:34:06 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:37:15 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:38:09 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'virtual void Robot::RobotInit()':
+../src/Robot.cpp:107:3: error: 'prefs' was not declared in this scope
+   prefs = Preferences::GetInstance();
+   ^
+15:38:34 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:41:25 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:43:51 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:45:51 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:47:56 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+15:50:28 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:55:22 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+16:01:59 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+16:05:00 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+16:10:28 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+16:11:56 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+16:44:19 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+23:47:01 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+23:48:30 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+23:50:17 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:09:51 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:11:37 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+18:13:41 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+18:18:16 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:23:51 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'virtual void Robot::Autonomous()':
+../src/Robot.cpp:248:37: error: 'autoSelected' was not declared in this scope
+   std::cout << "Auto selected: " << autoSelected << std::endl;
+                                     ^
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+18:23:55 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'virtual void Robot::Autonomous()':
+../src/Robot.cpp:248:37: error: 'autoSelected' was not declared in this scope
+   std::cout << "Auto selected: " << autoSelected << std::endl;
+                                     ^
+18:24:05 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'virtual void Robot::Autonomous()':
+../src/Robot.cpp:248:37: error: 'autoSelected' was not declared in this scope
+   std::cout << "Auto selected: " << autoSelected << std::endl;
+                                     ^
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+18:24:23 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+../src/Robot.cpp: In member function 'virtual void Robot::Autonomous()':
+../src/Robot.cpp:248:37: error: 'autoSelected' was not declared in this scope
+   std::cout << "Auto selected: " << autoSelected << std::endl;
+                                     ^
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+18:24:39 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:26:07 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:29:48 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:30:22 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+18:35:46 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+15:24:23 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+16:37:38 **** Incremental Build of configuration Debug for project GuestControl ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y -I/Users/darien/wpilib/cpp/current/include "-I/Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/src" -O0 -g3 -Wall -c -fmessage-length=0 -o src/Robot.o ../src/Robot.cpp 
+arm-frc-linux-gnueabi-g++ -L/Users/darien/wpilib/cpp/current/lib -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram src/Robot.o -lwpi 
+Info: Nothing to build for GuestControl
+Info: Nothing to build for CompetitionControl
+Info: Nothing to build for DemoControl
+Info: Nothing to build for GuestControl

@@ -1,0 +1,1332 @@
+!SESSION 2016-05-22 19:53:25.116 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-05-22 19:53:26.846
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [441]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 1 0 2016-05-22 19:54:00.675
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui.intro 4 0 2016-05-22 19:54:05.206
+!MESSAGE /Users/darien/Desktop/eclipse luna/eclipse FIRST.app/Contents/MacOS/WPILib Intro/sample.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /Users/darien/Desktop/eclipse luna/eclipse FIRST.app/Contents/MacOS/WPILib Intro/sample.xml (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:613)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:177)
+	at org.eclipse.ui.internal.intro.impl.model.loader.IntroContentParser.parse(IntroContentParser.java:94)
+	at org.eclipse.ui.internal.intro.impl.model.loader.IntroContentParser.<init>(IntroContentParser.java:56)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.loadDOM(IntroModelRoot.java:885)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.processConfigExtension(IntroModelRoot.java:411)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.resolveConfigExtensions(IntroModelRoot.java:381)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.resolveChildren(IntroModelRoot.java:242)
+	at org.eclipse.ui.internal.intro.impl.model.AbstractIntroContainer.getChildren(AbstractIntroContainer.java:86)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.loadModel(IntroModelRoot.java:164)
+	at org.eclipse.ui.internal.intro.impl.model.loader.BaseExtensionPointManager.loadModel(BaseExtensionPointManager.java:95)
+	at org.eclipse.ui.internal.intro.impl.model.loader.ExtensionPointManager.loadCurrentModel(ExtensionPointManager.java:61)
+	at org.eclipse.ui.internal.intro.impl.model.loader.ExtensionPointManager.getCurrentModel(ExtensionPointManager.java:73)
+	at org.eclipse.ui.intro.config.CustomizableIntroPart.init(CustomizableIntroPart.java:154)
+	at org.eclipse.ui.internal.ViewIntroAdapterPart.init(ViewIntroAdapterPart.java:216)
+	at org.eclipse.ui.internal.ViewReference.initialize(ViewReference.java:140)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:305)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$6.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:69)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1246)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:69)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4732)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:108)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.handleEvent(PartRenderingEngine.java:141)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4732)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:303)
+	at org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon.subscribeRenderingChanged(CleanupAddon.java:265)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:56)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4732)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:303)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:485)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:454)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:705)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:682)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:620)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:608)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1137)
+	at org.eclipse.ui.internal.WorkbenchPage.showPart(WorkbenchPage.java:1292)
+	at org.eclipse.ui.internal.WorkbenchPage.busyShowView(WorkbenchPage.java:1283)
+	at org.eclipse.ui.internal.WorkbenchPage$14.run(WorkbenchPage.java:4208)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:4204)
+	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:4184)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.createIntro(WorkbenchIntroManager.java:182)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.showIntro(WorkbenchIntroManager.java:129)
+	at org.eclipse.ui.application.WorkbenchWindowAdvisor.openIntro(WorkbenchWindowAdvisor.java:190)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.openIntro(IDEWorkbenchWindowAdvisor.java:564)
+	at org.eclipse.ui.internal.WorkbenchWindow.setup(WorkbenchWindow.java:758)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:85)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.inject(ContextInjectionFactory.java:73)
+	at org.eclipse.ui.internal.Workbench.createWorkbenchWindow(Workbench.java:1480)
+	at org.eclipse.ui.internal.Workbench.getActiveWorkbenchWindow(Workbench.java:1453)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.updateActiveShell(WorkbenchSourceProvider.java:943)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.getCurrentState(WorkbenchSourceProvider.java:137)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider$6.handleEvent(WorkbenchSourceProvider.java:703)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1098)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1471)
+	at org.eclipse.swt.widgets.Shell.windowDidBecomeKey(Shell.java:2159)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5686)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:214)
+	at org.eclipse.swt.widgets.Widget.becomeKeyWindow(Widget.java:366)
+	at org.eclipse.swt.widgets.Shell.becomeKeyWindow(Shell.java:525)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5510)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSWindow.makeKeyAndOrderFront(NSWindow.java:202)
+	at org.eclipse.swt.widgets.Shell.makeKeyAndOrderFront(Shell.java:1291)
+	at org.eclipse.swt.widgets.Shell.setWindowVisible(Shell.java:1972)
+	at org.eclipse.swt.widgets.Shell.open(Shell.java:1349)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.postProcess(WBWRenderer.java:744)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1074)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:07.199
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:07.200
+!MESSAGE Install necessary for tools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:07.679
+!MESSAGE unzip /var/folders/1c/r3fn6b114274sggytvxzhnxw0000gp/T/tools-9025516205394033838.zip -d /Users/darien/wpilib/tools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:08.332
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:08.333
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:08.334
+!MESSAGE Install necessary for cpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:08.778
+!MESSAGE unzip /var/folders/1c/r3fn6b114274sggytvxzhnxw0000gp/T/cpp-475396034409948571.zip -d /Users/darien/wpilib/cpp/current
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:10.006
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:10.008
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:10.008
+!MESSAGE Install necessary for java
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:10.221
+!MESSAGE unzip /var/folders/1c/r3fn6b114274sggytvxzhnxw0000gp/T/java-4877863009177566474.zip -d /Users/darien/wpilib/java/current
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-22 19:54:10.621
+!MESSAGE Installedjava
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-22 19:54:58.023
+!MESSAGE Project: CompetitionControl Project Type: edu.wpi.first.wpilib.plugins.cpp.wizards.newproject.CPPProjectType$3@475b117e
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-22 19:54:58.220
+!MESSAGE Indexed 'CompetitionControl' (0 sources, 0 headers) in 0.007 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:11.660
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:13.710
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:14.793
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:14.989
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:15.232
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:15.445
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:15.628
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:15.849
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-22 19:55:49.226
+!MESSAGE Project: DemoControl Project Type: edu.wpi.first.wpilib.plugins.cpp.wizards.newproject.CPPProjectType$3@475b117e
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-22 19:55:49.346
+!MESSAGE Indexed 'DemoControl' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:52.893
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:53.478
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 19:55:54.015
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 20:14:36.346
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 0 2016-05-22 20:14:37.372
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2118)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:207)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2613)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:798)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1283)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5907)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4691)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:918)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:498)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-22 20:14:37.904
+!MESSAGE Indexed 'GuestDemoControl' (1 sources, 157 headers) in 2.03 sec: 14,547 declarations; 8,405 references; 189 unresolved inclusions; 50 syntax errors; 2,566 unresolved names (10%)
+
+!ENTRY org.eclipse.ui 4 0 2016-05-22 20:15:59.461
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2118)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:207)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2613)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:798)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1283)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5907)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationNextEventMatchingMask(Display.java:5000)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5378)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.nextEventMatchingMask(NSApplication.java:94)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-22 21:09:33.513
+!MESSAGE Project: GuestControl Project Type: edu.wpi.first.wpilib.plugins.cpp.wizards.newproject.CPPProjectType$3@475b117e
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-05-22 21:09:33.561
+!MESSAGE Indexed 'GuestControl' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 21:09:36.926
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 21:09:37.341
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-22 21:09:37.795
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 0 2016-05-22 21:10:20.707
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2118)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:207)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2613)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:798)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1283)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5907)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4691)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:918)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:498)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2016-05-23 13:09:44.574
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2118)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:207)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2613)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:798)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1283)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5907)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4691)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:918)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:498)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2016-05-25 14:08:30.625 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-05-25 14:08:31.995
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [441]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 1 0 2016-05-25 14:08:45.475
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 14:08:55.421
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 14:08:55.422
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 14:08:55.428
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 14:08:55.429
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 14:08:55.448
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 14:08:55.448
+!MESSAGE Installedjava
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-25 14:15:27.285
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-25 14:15:27.286
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-25 14:16:22.441
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-25 14:16:22.442
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2016-05-25 18:22:10.717 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-05-25 18:22:12.094
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [441]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 18:22:27.838
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 18:22:27.846
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 18:22:27.847
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 18:22:27.848
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 18:22:27.857
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-25 18:22:27.857
+!MESSAGE Installedjava
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-25 18:25:48.789
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-25 18:25:48.790
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:07:13.590
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:07:13.590
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:32:28.165
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:32:28.166
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:34:09.405
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:34:09.406
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:37:18.652
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:37:18.653
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:38:37.194
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:38:37.194
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:41:28.127
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:41:28.127
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:43:54.196
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:43:54.196
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:45:54.307
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:45:54.307
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:47:59.575
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:47:59.575
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:51:57.323
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:51:57.323
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:55:24.921
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 15:55:24.922
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:02:02.192
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:02:02.192
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.ant.launching 4 0 2016-05-26 16:02:18.322
+!MESSAGE Failure of Background Ant Build
+!STACK 1
+org.eclipse.core.runtime.CoreException: /Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+	at org.eclipse.ant.core.AntRunner.handleInvocationTargetException(AntRunner.java:448)
+	at org.eclipse.ant.core.AntRunner.run(AntRunner.java:380)
+	at org.eclipse.ant.internal.launching.launchConfigurations.AntLaunchDelegate$1.run(AntLaunchDelegate.java:244)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: /Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+	at net.sf.antcontrib.logic.Assert.execute(Assert.java:260)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:435)
+	at org.apache.tools.ant.Target.performTasks(Target.java:456)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1393)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1364)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.core.ant.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:36)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1248)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:703)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:525)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.ant.core.AntRunner.run(AntRunner.java:371)
+	... 2 more
+!SUBENTRY 1 org.eclipse.ant.core 4 1 2016-05-26 16:02:18.323
+!MESSAGE /Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+!STACK 0
+/Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+	at net.sf.antcontrib.logic.Assert.execute(Assert.java:260)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:435)
+	at org.apache.tools.ant.Target.performTasks(Target.java:456)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1393)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1364)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.core.ant.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:36)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1248)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:703)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:525)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.ant.core.AntRunner.run(AntRunner.java:371)
+	at org.eclipse.ant.internal.launching.launchConfigurations.AntLaunchDelegate$1.run(AntLaunchDelegate.java:244)
+	at java.lang.Thread.run(Thread.java:744)
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:02:51.246
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:02:51.246
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:05:03.404
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:05:03.404
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:10:30.993
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:10:30.993
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:11:59.723
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 16:11:59.724
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:44:44.106
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:44:44.107
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.ant.launching 4 0 2016-05-26 23:45:00.238
+!MESSAGE Failure of Background Ant Build
+!STACK 1
+org.eclipse.core.runtime.CoreException: /Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+	at org.eclipse.ant.core.AntRunner.handleInvocationTargetException(AntRunner.java:448)
+	at org.eclipse.ant.core.AntRunner.run(AntRunner.java:380)
+	at org.eclipse.ant.internal.launching.launchConfigurations.AntLaunchDelegate$1.run(AntLaunchDelegate.java:244)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: /Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+	at net.sf.antcontrib.logic.Assert.execute(Assert.java:260)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:435)
+	at org.apache.tools.ant.Target.performTasks(Target.java:456)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1393)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1364)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.core.ant.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:36)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1248)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:703)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:525)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.ant.core.AntRunner.run(AntRunner.java:371)
+	... 2 more
+!SUBENTRY 1 org.eclipse.ant.core 4 1 2016-05-26 23:45:00.238
+!MESSAGE /Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+!STACK 0
+/Users/darien/wpilib/cpp/current/ant/build.xml:46: Assertion failed boolean test.
+roboRIO not found, please check that the roboRIO is connected, imaged and that the team number is set properly in Eclipse
+	at net.sf.antcontrib.logic.Assert.execute(Assert.java:260)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.taskdefs.Sequential.execute(Sequential.java:68)
+	at net.sf.antcontrib.logic.IfTask.execute(IfTask.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.TaskAdapter.execute(TaskAdapter.java:154)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:435)
+	at org.apache.tools.ant.Target.performTasks(Target.java:456)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1393)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1364)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.core.ant.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:36)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1248)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:703)
+	at org.eclipse.ant.internal.core.ant.InternalAntRunner.run(InternalAntRunner.java:525)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.ant.core.AntRunner.run(AntRunner.java:371)
+	at org.eclipse.ant.internal.launching.launchConfigurations.AntLaunchDelegate$1.run(AntLaunchDelegate.java:244)
+	at java.lang.Thread.run(Thread.java:744)
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:45:44.044
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:45:44.045
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:47:03.872
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:47:03.872
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:48:32.923
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:48:32.924
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:50:19.785
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-26 23:50:19.786
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:09:54.262
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:09:54.262
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:11:40.227
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:11:40.227
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:13:47.268
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:13:47.271
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:18:22.077
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:18:22.078
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:23:55.026
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:23:55.027
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:24:47.739
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:24:47.740
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:26:10.565
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:26:10.565
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:28:28.823
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/CompetitionControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:28:28.823
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:29:51.579
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:29:51.579
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:30:25.536
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:30:25.536
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:35:49.281
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-27 18:35:49.281
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2016-05-29 14:59:23.896 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-05-29 14:59:25.500
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [441]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 1 0 2016-05-29 14:59:40.851
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 14:59:49.849
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 14:59:49.850
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 14:59:49.852
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 14:59:49.854
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 14:59:50.240
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 14:59:50.241
+!MESSAGE Installedjava
+!SESSION 2016-05-29 15:23:48.978 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -keyring /Users/darien/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-05-29 15:23:50.267
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [441]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 1 0 2016-05-29 15:23:55.801
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 15:24:02.653
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 15:24:02.653
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 15:24:02.657
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 15:24:02.658
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 15:24:02.888
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-05-29 15:24:02.888
+!MESSAGE Installedjava
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-29 15:24:27.982
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-29 15:24:27.983
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-30 16:42:21.064
+!MESSAGE Running ant file: /Users/darien/Desktop/FIRST code/FRC Development/FRC-2016-Team-4026-Giant-Piston/GuestControl/build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-05-30 16:42:21.064
+!MESSAGE Targets: deploy, Mode: run
